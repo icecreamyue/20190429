@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+    <style>
+
+        button{
+            display: block;
+            margin: 10px;
+        }
+        .slide{
+            width: 100px;
+            height: 100px;
+            background: #6cf;
+        }
+        .animate{
+            width: 200px;
+            height: 200px;
+            background: #6cf;
+        }
+    </style>
+    <title>use jQuery</title>
+</head>
+
+<body>
+    <h1>Hello, world!</h1>
+    <button type="button" id="test">click on me</button>
+    <p id="first">this is a paragraph</p>
+    <p id="second">this is an another paragraph</p>
+
+    <button type="button" id="slide">start slide</button>
+    <div class="slide">this is a slide</div>
+
+    <button type="button" id="animate">start animate</button>
+    <div class="animate"></div>
+
+    <button type="button" id="myajax">add text</button>
+    <div class="myAjax">test ajax</div>
+
+    <!-- Optional JavaScript -->
+    <script>
+
+        $(document).ready(function () {
+            $("#test").click(function () {
+                $("p").toggle("slow",function () {
+                    console.log("now it is toggle");
+                });
+                //切换p显示隐藏，toggle值可为slow，fast，normal or miliseconds
+            });
+            $("#slide").click(function () {
+                $(".slide").slideToggle();
+                //同理有属性slideDown,slideUp,fadeIn,fadeOut,fadeTo,fadeToggle
+            });
+            $("#animate").click(function () {
+                $(".animate").animate({height:'20px'},"slow");
+            })
+        });
+
+        // 改变html内容
+        $("p").append(" this is append"); // 追加内容
+        $("p").prepend("this is prepend "); // 内部预置
+        //同理有after before 插入
+
+        // 改变css
+        $("p").css({"font-size":"18px","color":"red"});
+
+        // ajax
+        $("#myajax").click(function () {
+            //方法一
+            $(".myAjax").load('./message.txt');
+
+            //方法二
+            // htmlobj = $.ajax({url:'./message.txt'});
+            // $(".myAjax").html(htmlobj.responseText);
+        });
+
+        /* 作业：
+        1、 $(“*”)  匹配所有元素
+            $(“#lastname”)      匹配id为lastname的元素
+            $(“.intro”)         匹配class为intro的元素
+            $(“p”)              匹配所有p标签
+            $(“.intro.demo”)    匹配class为intro demo的元素
+
+        2、通过文件中引入jQuery的cdn来引入jQuery
+
+        3、涉及动画的函数中添加，动画执行完成后执行callback，可反馈执行结果
+           如果希望在一个涉及动画执行函数之后执行语句，使用callback函数
+
+        4、jQuery.ajax()
+        $(selector).load(url,data,callback)     把远程数据加载到被选的元素中
+        $.ajax(options)                         把远程数据加载到 XMLHttpRequest 对象中
+        $.get(url,data,callback,type)           使用 HTTP GET 来加载远程数据
+        $.post(url,data,callback,type)          使用 HTTP POST 来加载远程数据
+        $.getJSON(url,data,callback)            使用 HTTP GET 来加载远程 JSON 数据
+        $.getScript(url,callback)               加载并执行远程的 JavaScript 文件
+        参数描述
+        url         被加载的数据的 URL（地址）
+        data        发送到服务器的数据的键/值对象
+        callback    当数据被加载时，所执行的函数
+        type        被返回的数据的类型 (html,xml,json,jasonp,script,text)
+        options     完整 AJAX 请求的所有键/值对选项
+
+        5、jQuery事件
+        鼠标事件
+        $(selector).click()
+        $(selector).dblclick()
+        $(selector).hover()
+        $(selector).mouseenter()
+        $(selector).mouseleave()
+        键盘事件
+        $(selector).keypress()
+        $(selector).keydown()
+        $(selector).keyup()
+        表单事件
+        $(selector).submit()
+        $(selector).change()
+        $(selector).focus()
+        $(selector).blur()
+        文档事件
+        $(selector).load()
+        $(selector).resize()
+        $(selector).scroll()
+        $(selector).unload()
+
+         */
+    </script>
+</body>
+</html>
