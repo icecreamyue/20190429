@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3490972-896a-4c45-a72b-eed73f050c3b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/20190505/index1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20190505/index1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20190505/validate.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap-node.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap-note.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,24 +20,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jquery.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-936">
+            <state relative-caret-position="-414">
               <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bootstrap1.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bootstrap-note.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="279" column="9" lean-forward="true" selection-start-line="279" selection-start-column="9" selection-end-line="279" selection-end-column="9" />
+            <state relative-caret-position="632">
+              <caret line="327" column="11" selection-start-line="327" selection-start-column="11" selection-end-line="327" selection-end-column="11" />
               <folding>
-                <element signature="e#2798#2802#0" expanded="true" />
-                <element signature="e#2809#2813#0" expanded="true" />
-                <element signature="e#7535#7542#1" expanded="true" />
+                <element signature="e#9767#9774#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/20190505/index1.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2718">
+              <caret line="151" column="5" lean-forward="true" selection-start-line="151" selection-start-column="5" selection-end-line="151" selection-end-column="5" />
+              <folding>
+                <element signature="e#1929#1936#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/20190505/validate.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="69" column="9" lean-forward="true" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
+              <folding>
+                <element signature="n#style#0;n#label#3;n#fieldset#0;n#fieldset#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -51,21 +77,28 @@
         <option value="$PROJECT_DIR$/message.txt" />
         <option value="$PROJECT_DIR$/jquery.html" />
         <option value="$PROJECT_DIR$/bootstrap1.html" />
+        <option value="$PROJECT_DIR$/20190505/index1.css" />
+        <option value="$PROJECT_DIR$/20190505/validate.html" />
+        <option value="$PROJECT_DIR$/20190505/index1.html" />
+        <option value="$PROJECT_DIR$/bootstrap-note.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
     <option name="height" value="688" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -73,12 +106,16 @@
               <item name="learn" type="b2602c69:ProjectViewProjectNode" />
               <item name="learn" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="learn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="learn" type="462c0819:PsiDirectoryNode" />
+              <item name="20190505" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -89,7 +126,7 @@
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -114,18 +151,20 @@
       <option name="presentableId" value="Default" />
       <updated>1556508129719</updated>
       <workItem from="1556508147387" duration="18357000" />
-      <workItem from="1556592482455" duration="22829000" />
+      <workItem from="1556592482455" duration="23035000" />
+      <workItem from="1557022401697" duration="4146000" />
+      <workItem from="1557028928667" duration="21321000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41186000" />
+    <option name="totallyTimeSpent" value="66859000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1482602" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15279879" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -162,22 +201,47 @@
     <entry file="file://$PROJECT_DIR$/message.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/jquery.html">
+    <entry file="file://$PROJECT_DIR$/20190505/index1.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-936">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="288">
+          <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bootstrap1.html">
+    <entry file="file://$PROJECT_DIR$/bootstrap-note.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="279" column="9" lean-forward="true" selection-start-line="279" selection-start-column="9" selection-end-line="279" selection-end-column="9" />
+        <state relative-caret-position="632">
+          <caret line="327" column="11" selection-start-line="327" selection-start-column="11" selection-end-line="327" selection-end-column="11" />
           <folding>
-            <element signature="e#2798#2802#0" expanded="true" />
-            <element signature="e#2809#2813#0" expanded="true" />
-            <element signature="e#7535#7542#1" expanded="true" />
+            <element signature="e#9767#9774#1" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/20190505/index1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2718">
+          <caret line="151" column="5" lean-forward="true" selection-start-line="151" selection-start-column="5" selection-end-line="151" selection-end-column="5" />
+          <folding>
+            <element signature="e#1929#1936#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/20190505/validate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="69" column="9" lean-forward="true" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#label#3;n#fieldset#0;n#fieldset#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jquery.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-414">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>

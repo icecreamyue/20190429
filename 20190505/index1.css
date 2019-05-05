@@ -1,0 +1,18 @@
+header{
+    height: 50px;
+    padding: 5px;
+    /*background-color: #eee;*/
+
+}
+.section-one{
+    height: 720px;
+    background-color: #abdde5;
+}
+.part-one-item-one{
+    padding-top: 150px;
+    line-height: 50px;
+    padding-bottom: 10px;
+}
+.btnM{
+    margin-top: 30px;
+}
