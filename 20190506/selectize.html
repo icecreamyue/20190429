@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>selectize</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.min.css" />
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js"></script>
+    <style>
+        .exampleSearch {
+            width: 300px;
+            height: 500px;
+            margin: 0 auto;
+            display: block;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+<div class='exampleSearch'>
+    <select name="example" placeholder="请选择" id="example" multiple="multiple">
+        <option value="front-end">112Front End</option>
+        <option value="back-end">Back-End</option>
+        <option value="designer">Designer</option>
+        <option value="ruby">Ruby</option>
+        <option value="javascript">JavaScript</option>
+        <option value="python">Python</option>
+        <option value="developer">Developer</option>
+        <option value="wordpress">WordPress</option>
+        <option value="php">PHP</option>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="jquery">JQuery</option>
+        <option value="ember">Ember</option>
+        <option value="angular">Angular</option>
+        <option value="react">React</option>
+        <option value="ios">iOS</option>
+        <option value="android">Android</option>
+        <option value="java">Java</option>
+        <option value="git">Git</option>
+        <option value="sass">Sass</option>
+        <option value="engineer">Engineer</option>
+    </select>
+    <div><button id="btn">获取值</button></div>
+    <div><span id="val"></span></div>
+    <br /><br />
+    <select name="example2" placeholder="请选择" id="example2" multiple="multiple">
+    </select>
+    <div><button id="btn2">获取值</button></div>
+    <div><span id="val2"></span></div>
+</div>
+
+</body>
+<script>
+    $(document).ready(function() {
+        $('#example').selectize({
+            //设置最多能选择多少个,默认null,多选
+//				maxItems:1,
+            plugins: [ 'remove_button' ],
+            //动态创建option分隔符
+            delimiter: ",",
+            create: function(input) {
+                return {
+                    value: input,
+                    text: input
+                }
+            },
+            //设置下拉最多显示个数
+            maxOptions:5,
+        });
+        var selectize = $('#example')[0].selectize;
+        $("#btn").click(function() {
+            //获取选中值
+            $("#val").html(selectize.getValue().join(","))
+        });
+        //动态添加options
+        $('#example2').selectize({
+            //值字段
+            valueField: 'id',
+            //文本字段
+            labelField: 'name',
+            //搜索字段
+            searchField: ['id', 'name'],
+            plugins: [ 'remove_button' ],
+            render:{
+                //自定义option
+                option:function(item,escape) {
+                    return "<div>【" + item.id + "】" + item.name + "</div>";
+                },
+                //自定义选中选项格式
+                item:function(item) {
+                    return '<div>【' + item.id + "】" + item.name + '</div>';
+                }
+            },
+            onItemAdd: function(value, $item) {
+                console.log("选项选中事件");
+            },
+            onItemRemove: function(value) {
+                console.log("选项取消选中事件");
+            }
+        });
+        var selectize2 = $('#example2')[0].selectize;
+        $("#btn2").click(function() {
+            //获取选中值
+            $("#val2").html(selectize2.getValue().join(","))
+        });
+        var options = [];
+        options.push({id:1, name:"java"})
+        options.push({id:2, name:"html"})
+        options.push({id:3, name:"js"})
+        // 清空选项
+        selectize2.clear();
+        selectize2.clearOptions();
+        $.each(options, function(index, value) {
+            //添加选项
+            selectize2.addOption(value);
+        })
+    });
+</script>
+
+</html>
