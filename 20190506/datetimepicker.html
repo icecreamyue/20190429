@@ -5,22 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Datepicker - Default functionality</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="https://cdn.bootcss.com/bootstrap-datetimepicker/3.1.4/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/eonasdan-bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.bootcss.com/moment.js/2.24.0/moment-with-locales.min.js"></script>
-    <script src="https://cdn.bootcss.com/bootstrap-datetimepicker/3.1.4/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="https://cdn.bootcss.com/eonasdan-bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
 </head>
 <body>
 
-<p>Date: <input size="16" type="text" value="" readonly class="form_datetime"></p>
+<div class="row">
+    <div class='col-sm-6'>
+        <div class="form-group">
+            <label>选择开始时间：</label>
+            <!--指定 date标记-->
+            <div class='input-group date' id='datetimepicker1'>
+                <input type='text' class="form-control" />
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class='col-sm-6'>
+        <div class="form-group">
+            <label>选择结束时间：</label>
+            <!--指定 date标记-->
+            <div class='input-group date' id='datetimepicker2'>
+                <input type='text' class="form-control" />
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <script type="text/javascript">
-    $(".form_datetime").datetimepicker({
-        format: "DD MM YYYY - HH:ii",
-        locale: moment.locale('zh-cn'),
-        minuteStep: 5
+    $(function () {
+        var picker1 = $("#datetimepicker1").datetimepicker({
+            format: "YYYY MM DD",
+            locale: moment.locale("zh-cn"),
+
+        });
+        var picker2 = $("#datetimepicker2").datetimepicker({
+            format: "YYYY MM DD",
+            locale: moment.locale("zh-cn")
+        });
+        $("#datetimepicker1").on("dp.change", function (e) {
+            $('#datetimepicker2').data("DateTimePicker").minDate(e.date);
+        });
+        $("#datetimepicker2").on("dp.change", function (e) {
+            $('#datetimepicker1').data("DateTimePicker").maxDate(e.date);
+        });
+
+        // // picker2.datetimepicker("setStartDate","2012-01-01");
+        // console.log(picker2.startDate)
     });
 </script>
 
