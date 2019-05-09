@@ -158,6 +158,10 @@
             // language: {
             //     "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/German.json"
             // },
+            // serverSide: true,
+
+            searching: true,
+
             pageLength: 8,
             pagination: true,
             oLanguage: {
@@ -176,7 +180,9 @@
                     sNext: "下一页",
                     sPrevious: "上一页"
                 }
-            }
+            },
+            dom: 'lfrtip',
+            // buttons: [ 'copy', 'csv', 'excel' ]
             // "search": {
             //     "caseInsensitive": true,
             //     "regex": false,
@@ -202,7 +208,9 @@
         // table.on('draw', function () {
         //     console.log( 'Redraw occurred at: '+new Date().getTime() );
         // } );
-
+        table.filter( function ( value, index ) {
+            return value > 20 ? true : false;
+        } );
     </script>
 </body>
 </html>
